@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Project Mind Metrics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="nav">
+        <div class="wrap nav-content">
+            <a href="/" class="nav-brand">Project Sahay [Admin Portal]</a>
+            <div class="nav-links">
+                <a href="/">← Back to Main Site</a>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="title">Institutional Wellness Dashboard</div>
+        <div class="sub">This dashboard presents aggregated and fully anonymous data to help identify student wellness trends. <strong>No individual student data is ever displayed.</strong></div>
+
+        <div class="grid-main">
+            <div class="grid-col">
+                <div class="card">
+                    <h2 class="h2">Overall Wellness Trends</h2>
+                    <p class="muted">Average PHQ-9 & GAD-7 scores across campus (Updated weekly)</p>
+                    <div class="chart-container tall">
+                        <canvas id="trendsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-col">
+                <div class="card">
+                    <h2 class="h2">Key Concern Areas</h2>
+                    <p class="muted">Distribution of primary concerns based on scores.</p>
+                    <div class="chart-container">
+                        <canvas id="concernsChart"></canvas>
+                    </div>
+                </div>
+                 <div class="card">
+                    <h2 class="h2">Resource Engagement</h2>
+                    <p class="muted">Most accessed categories in the Resource Hub this month.</p>
+                    <div class="chart-container">
+                        <canvas id="resourcesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='admin.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Hub - Project Mind Metrics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="nav">
+        <div class="wrap nav-content">
+            <a href="/" class="nav-brand">Project Mind Metrics</a>
+            <div class="nav-links">
+                <a href="/dashboard">My Dashboard</a>
+                <a href="/resources" class="active">Resource Hub</a>
+                <a href="/mitra">AI Mitra Chat</a>
+                <a href="#" onclick="alert('Counsellor Booking feature coming soon!')">Book Appointment</a>
+                <a href="#" onclick="alert('Peer Support Forum feature coming soon!')">Peer Forum</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="title">Psychoeducational Resource Hub</div>
+        <div class="sub">Explore guides, tools, and audio resources to support your mental wellness journey. From Bhimavaram, we understand the local context.</div>
+        <div class="lang-selector">
+            Language: <select><option>English</option><option>తెలుగు (Telugu)</option><option>हिन्दी (Hindi)</option></select>
+        </div>
+        
+        <div id="crisisSection" class="card crisis-box">
+            <h2 class="h2">Immediate Help (24/7)</h2>
+            <p>If you are in a crisis, please seek help immediately by calling a helpline.</p>
+            <ul>
+                <li><strong>Kiran Mental Health Helpline:</strong> <a href="tel:1800-599-0019">1800-599-0019</a> (Govt. of India)</li>
+                <li><strong>Vandrevala Foundation:</strong> <a href="tel:9999666555">9999666555</a></li>
+            </ul>
+        </div>
+        <div id="professionalSection" class="card resource-section">
+            <h2 class="h2">Connecting with a Professional</h2>
+            <p>Speaking with a qualified mental health professional is a proactive step towards wellness. Your college counsellor's booking link is available on the dashboard.</p>
+        </div>
+        <div id="selfHelpSection" class="card resource-section">
+            <h2 class="h2">Relaxation Audio & Self-Help Guides</h2>
+            <p>Use these tools to manage stress and anxiety in the moment.</p>
+            <h4>Audio Exercises:</h4>
+            <ul>
+                <li><a href="#">▶️ 5-Minute Guided Body Scan Meditation (Audio)</a></li>
+                <li><a href="#">▶️ 10-Minute Mindful Breathing for Stress Relief (Audio)</a></li>
+            </ul>
+            <h4>Wellness Guides:</h4>
+            <ul>
+                <li><a href="#">📄 Understanding and Managing Academic Stress (PDF Guide)</a></li>
+                <li><a href="#">📄 A Student's Guide to Better Sleep Hygiene (PDF Guide)</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='resources.js') }}"></script>
+</body>
+</html>

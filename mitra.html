@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mitra Chat - Project Mind Metrics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="nav">
+        <div class="wrap nav-content">
+            <a href="/" class="nav-brand">Project Mind Metrics</a>
+            <div class="nav-links">
+                <a href="/dashboard">My Dashboard</a>
+                <a href="/resources">Resource Hub</a>
+                <a href="/mitra" class="active">AI Mitra Chat</a>
+                <a href="#" onclick="alert('Counsellor Booking feature coming soon!')">Book Appointment</a>
+                <a href="#" onclick="alert('Peer Support Forum feature coming soon!')">Peer Forum</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="title">AI Mitra 🤖</div>
+        <div class="sub">Your confidential AI-guided assistant for first-aid support and coping strategies. I am not a therapist, but I can offer helpful techniques.</div>
+
+        <div class="card chat-container">
+            <div id="chat-window" class="chat-window">
+                </div>
+            <div id="chat-options" class="chat-options">
+                </div>
+            <div class="chat-input-area">
+                <input type="text" id="userInput" placeholder="Type your message here..." autocomplete="off">
+                <button id="sendBtn" class="btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='mitra.js') }}"></script>
+</body>
+</html>

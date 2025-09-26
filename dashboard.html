@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Project Mind Metrics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="nav">
+        <div class="wrap nav-content">
+            <a href="/" class="nav-brand">Project Mind Metrics</a>
+            <div class="nav-links">
+                <a href="/dashboard" class="active">My Dashboard</a>
+                <a href="/resources">Resource Hub</a>
+                <a href="/mitra">AI Mitra Chat</a>
+                <a href="#" onclick="alert('Counsellor Booking feature coming soon!')">Book Appointment</a>
+                <a href="#" onclick="alert('Peer Support Forum feature coming soon!')">Peer Forum</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="title">Your Wellness Dashboard</div>
+        <div class="sub">This is your confidential space. Your personal data is never shared.</div>
+
+        <div class="grid-main">
+            <div class="grid-col">
+                <section class="card">
+                    <h2 class="h2">Daily Wellness Check-in</h2>
+                    <p class="muted" style="margin-top:-8px; margin-bottom:12px;">Complete this short check-in to track your mood and get personalized insights.</p>
+                    <div class="grid-qs">
+                        <div id="phq">
+                            <h3 class="h3">PHQ-9 (Depression)</h3>
+                            <div id="phqQs"></div>
+                        </div>
+                        <div id="gad">
+                            <h3 class="h3">GAD-7 (Anxiety)</h3>
+                            <div id="gadQs"></div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="card">
+                    <h2 class="h2">Health Data (Optional)</h2>
+                    <p class="muted" style="margin-top:-8px; margin-bottom:12px;">Connect your Google Fit account to automatically include recent health metrics in your analysis.</p>
+                    <button class="btn alt" id="googleFitBtn">Connect to Google Fit</button>
+                    <div class="health-data-display">
+                        <div>Heart Rate: <span id="hrValue">--</span> bpm</div>
+                        <div>Blood Oxygen: <span id="spo2Value">--</span>%</div>
+                    </div>
+                </section>
+            </div>
+            <div class="grid-col">
+                <section class="card analysis-card">
+                    <h2 class="h2">Today's Insight ✨</h2>
+                    <button class="btn" id="analyzeBtn">Analyze My Check-in</button>
+                    <div id="aiSummary" class="ai-summary muted">Your personalized analysis will appear here.</div>
+                    <div class="scores-glance">
+                        <div><div class="muted">PHQ-9</div><div class="scoreBig" id="phqTotal">--</div></div>
+                        <div><div class="muted">GAD-7</div><div class="scoreBig" id="gadTotal">--</div></div>
+                        <div><div class="muted">Safety</div><div id="phqSafety" class="band">--</div></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
